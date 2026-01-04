@@ -26,7 +26,7 @@ export default function Contact() {
     setStatus("loading");
 
     //  Get the base URL from .env, or default to localhost
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
     try {
       // Use the variable in the fetch call
@@ -45,7 +45,7 @@ export default function Contact() {
         subject: "General Inquiry",
         message: "",
       });
-      setTimeout(() => setStatus("idle"), 5000);
+      setTimeout(() => setStatus("idle"), 20000);
     } catch (error) {
       console.error(error);
       setStatus("error");
