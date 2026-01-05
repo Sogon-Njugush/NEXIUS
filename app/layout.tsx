@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import AOSProvider from "@/components/AOSProvider";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +32,7 @@ export default function RootLayout({
               <Navbar />
 
               <main className="flex-grow pt-20">{children}</main>
-
+              <ScrollToTop />
               <Footer />
             </div>
           </AOSProvider>

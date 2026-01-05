@@ -43,9 +43,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  // ✅ FIX: Always render the Provider.
-  // If you need to avoid hydration mismatch for the whole app,
-  // render a blank div or null here, but NEVER return unwrapped children.
   if (!mounted) {
     // Optional: Return null to avoid "flash" of wrong theme,
     // but this hurts SEO. Better to just render the provider.
