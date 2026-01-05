@@ -31,17 +31,29 @@ export default function ApplyForJob() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
+    //Clean  the data
+    const payload = {
+      ...formData,
+      jobTitle,
+      // Only include portfolio if it's not empty string
+      portfolio: formData.portfolio ? formData.portfolio : undefined,
+    };
 
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
     try {
       const response = await fetch(`${baseUrl}/applications`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, jobTitle }),
+        body: JSON.stringify(payload),
       });
 
-      if (!response.ok) throw new Error("Failed");
+      // IMPROVED ERROR HANDLING
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Backend Validation Errors:", errorData); // Look at this log!
+        throw new Error(errorData.message || "Failed");
+      }
 
       setStatus("success");
     } catch (error) {
