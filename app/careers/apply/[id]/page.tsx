@@ -19,7 +19,6 @@ export default function ApplyForJob() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    phone: "",
     linkedin: "",
     portfolio: "",
     coverLetter: "",
