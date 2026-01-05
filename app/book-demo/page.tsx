@@ -25,7 +25,7 @@ export default function BookDemo() {
     setStatus("loading");
 
     // 3. Get API URL from env or fallback
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
     try {
       const response = await fetch(`${baseUrl}/demo`, {
@@ -34,12 +34,16 @@ export default function BookDemo() {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) throw new Error("Failed");
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Server Error:", errorData);
+        throw new Error(errorData.message || "Failed to submit");
+      }
 
       setStatus("idle");
       setSubmitted(true);
     } catch (err) {
-      console.error(err);
+      console.error("Submission Error:", err);
       setStatus("error");
     }
   };
