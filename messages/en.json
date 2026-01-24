@@ -47,6 +47,9 @@
       "identities": "Identities Managed",
       "countries": "Countries Served"
     },
+    "Partners": {
+      "trustedBy": "Trusted by industry leaders"
+    },
     "Tech": {
       "title": "Foundational Technology for Your Digital Platform",
       "subtitle": "Build, integrate, secure, and deploy digital services with our market-leading suite of solutions.",
@@ -64,7 +67,7 @@
     },
     "AI": {
       "badge": "New Intelligence",
-      "title": "AI at the Heart of Your Enterprise",
+      "title": "AI at the Heart <br/> of Your Enterprise",
       "subtitle": "Seamlessly integrate AI into your enterprise with our open, scalable, and governed solutions. Build AI-native applications and empower your teams.",
       "list": {
         "connect": "Connect GenAI models to legacy data",

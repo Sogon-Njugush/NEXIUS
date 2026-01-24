@@ -1,9 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Shield, Cpu, Layers, BarChart3 } from "lucide-react";
+import {
+  ArrowRight,
+  Shield,
+  Cpu,
+  Layers,
+  BarChart3,
+  Globe,
+  Frame,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import CountUp from "react-countup";
+import Marquee from "react-fast-marquee";
+
+const partners = [
+  { name: "Acme Corp", icon: Layers },
+  { name: "Quantum", icon: Cpu },
+  { name: "Echo", icon: Shield },
+  { name: "Nebula", icon: Globe },
+  { name: "Vertex", icon: BarChart3 },
+  { name: "Horizon", icon: Frame },
+];
 
 export default function Home() {
   const t = useTranslations("HomePage");
@@ -313,6 +331,41 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+      {/* PARTNERS MARQUEE */}
+      <section className="py-12 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#050a14]">
+        <div
+          className="max-w-7xl mx-auto px-6 mb-10 text-center"
+          data-aos="fade-up"
+        >
+          <p className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
+            {t("Partners.trustedBy")}
+          </p>
+        </div>
+
+        {/* The Marquee Component */}
+        <Marquee
+          gradient={true}
+          gradientColor="var(--background)"
+          gradientWidth={100}
+          speed={50}
+          pauseOnHover={true}
+          autoFill={true}
+        >
+          {partners.map((partner, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 mx-12 opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 cursor-pointer"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white">
+                <partner.icon className="h-6 w-6" />
+              </div>
+              <span className="text-xl font-bold text-slate-700 dark:text-slate-300">
+                {partner.name}
+              </span>
+            </div>
+          ))}
+        </Marquee>
       </section>
     </div>
   );
