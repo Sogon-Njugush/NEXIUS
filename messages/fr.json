@@ -1,6 +1,12 @@
 {
   "Navbar": {
     "platform": "Plateforme",
+    "solutions": "Solutions",
+    "resources": "Ressources",
+    "company": "Entreprise",
+    "bookDemo": "Réserver une démo",
+    "appearance": "Apparence",
+    "language": "Langue",
     "governance": "Gouvernance Automatisée",
     "governanceDesc": "Accélérez la conformité avec l'IA.",
     "dataNetwork": "Réseau de Données",
@@ -9,28 +15,85 @@
     "riskDesc": "Identifiez les risques multi-vectoriels.",
     "reporting": "Moteur de Reporting",
     "reportingDesc": "Générez des rapports prêts pour l'audit.",
-    "solutions": "Solutions",
     "enterprises": "Pour les Entreprises",
     "enterprisesDesc": "Conformité rationalisée à grande échelle.",
     "fintech": "Pour la FinTech",
     "fintechDesc": "Couverture réglementaire de bout en bout.",
     "logistics": "Pour la Logistique",
     "logisticsDesc": "Visibilité de la chaîne d'approvisionnement.",
-    "resources": "Ressources",
     "blog": "Blog Insights",
     "blogDesc": "Tendances du reporting numérique.",
     "events": "Événements et Webinaires",
-    "eventsDesc": "Prochains sommets.",
-    "company": "Entreprise",
-    "about": "À propos",
-    "aboutDesc": "Notre mission et histoire.",
+    "eventsDesc": "Sommets à venir.",
+    "about": "À propos de nous",
+    "aboutDesc": "Notre mission et notre histoire.",
     "careers": "Carrières",
     "careersDesc": "Rejoignez l'équipe.",
-    "contact": "Contacter le Support",
+    "contact": "Contacter le support",
     "contactDesc": "Obtenir de l'aide technique.",
-    "appearance": "Apparence",
-    "language": "Langue",
-    "bookDemo": "Réserver une démo",
     "hiring": "NOUS RECRUTONS"
+  },
+  "HomePage": {
+    "Hero": {
+      "titleStart": "Créez des expériences",
+      "titleEnd": "numériques intelligentes",
+      "subtitle": "Les expériences numériques fournies sous forme d'applications, d'agents et d'automatisations nécessitent une infrastructure cloud-native puissante. Nous gérons la complexité pour que vous puissiez innover.",
+      "ctaStart": "Commencer",
+      "ctaExplore": "Explorer les technologies"
+    },
+    "Stats": {
+      "customers": "Clients Entreprise Directs",
+      "transactions": "Transactions Traitées",
+      "identities": "Identités Gérées",
+      "countries": "Pays Desservis"
+    },
+    "Partners": {
+      "trustedBy": "La confiance des leaders de l'industrie"
+    },
+    "Tech": {
+      "title": "Technologie fondamentale pour votre plateforme numérique",
+      "subtitle": "Construisez, intégrez, sécurisez et déployez des services numériques avec notre suite de solutions leader sur le marché.",
+      "cards": {
+        "apiTitle": "Gestion des API",
+        "apiDesc": "Une plateforme complète pour créer, intégrer et exposer des services numériques sous forme d'API gérées.",
+        "intTitle": "Intégration",
+        "intDesc": "Technologie de niveau entreprise pour connecter les modèles d'IA, les sources de données et les systèmes existants.",
+        "iamTitle": "Identité et Accès (IAM)",
+        "iamDesc": "Accès sécurisé et pratique pour les consommateurs, les entreprises clientes et les agents IA.",
+        "devTitle": "Plateforme Développeur",
+        "devDesc": "Libérez la créativité de vos développeurs et livrez des applications plus rapidement grâce aux capacités en libre-service."
+      },
+      "learnMore": "En savoir plus"
+    },
+    "AI": {
+      "badge": "Nouvelle Intelligence",
+      "title": "L'IA au cœur <br/> de votre entreprise",
+      "subtitle": "Intégrez l'IA de manière transparente dans votre entreprise avec nos solutions ouvertes, évolutives et gouvernées.",
+      "list": {
+        "connect": "Connectez les modèles GenAI aux données existantes",
+        "govern": "Gouvernez les agents IA avec des politiques IAM",
+        "automate": "Automatisez les flux de travail avec une innovation intelligente"
+      },
+      "cta": "Explorer les solutions IA",
+      "stat": "Déploiement plus rapide"
+    },
+    "Recognition": {
+      "title": "Reconnaissance des Analystes",
+      "cards": {
+        "forresterOrg": "Forrester Wave™",
+        "forresterDesc": "Nommé Leader des logiciels de gestion d'API, T3 2024",
+        "kuppingerOrg": "KuppingerCole",
+        "kuppingerDesc": "Leader global produit et innovation en CIAM, 2024",
+        "gartnerOrg": "Gartner®",
+        "gartnerDesc": "Choix des clients pour la gestion complète du cycle de vie des API"
+      },
+      "readReport": "Lire le rapport"
+    },
+    "CTA": {
+      "title": "Prêt à construire votre plateforme ?",
+      "subtitle": "Rejoignez les meilleures entreprises mondiales pour offrir des expériences numériques sécurisées et intelligentes.",
+      "contact": "Contacter les ventes",
+      "try": "Essai gratuit"
+    }
   }
 }

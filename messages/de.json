@@ -2,27 +2,28 @@
   "Navbar": {
     "platform": "Plattform",
     "solutions": "Lösungen",
+    "resources": "Ressourcen",
     "company": "Unternehmen",
     "bookDemo": "Demo buchen",
     "appearance": "Erscheinungsbild",
     "language": "Sprache",
     "governance": "Automatisierte Governance",
-    "governanceDesc": "Beschleunigen Sie Compliance mit KI.",
+    "governanceDesc": "Compliance beschleunigen mit KI.",
     "dataNetwork": "Datennetzwerk",
     "dataNetworkDesc": "Verbinden Sie Daten in Ihrer Wertschöpfungskette.",
-    "risk": "Risikointelligenz",
-    "riskDesc": "Identifizieren Sie Multi-Vektor-Risiken.",
+    "risk": "Risiko-Intelligenz",
+    "riskDesc": "Erkennen Sie multi-vektorielle Risiken.",
     "reporting": "Berichts-Engine",
-    "reportingDesc": "Erstellen Sie prüfungsfähige Berichte.",
+    "reportingDesc": "Erstellen Sie prüfungssichere Berichte.",
     "enterprises": "Für Unternehmen",
     "enterprisesDesc": "Optimierte Compliance im großen Maßstab.",
     "fintech": "Für FinTech",
-    "fintechDesc": "End-to-End regulatorische Abdeckung.",
+    "fintechDesc": "Umfassende regulatorische Abdeckung.",
     "logistics": "Für Logistik",
-    "logisticsDesc": "Transparenz in der Lieferkette.",
+    "logisticsDesc": "Sichtbarkeit der Lieferkette.",
     "blog": "Insights Blog",
     "blogDesc": "Trends in der digitalen Berichterstattung.",
-    "events": "Veranstaltungen & Webinare",
+    "events": "Events & Webinare",
     "eventsDesc": "Kommende Gipfeltreffen.",
     "about": "Über uns",
     "aboutDesc": "Unsere Mission und Geschichte.",
@@ -34,9 +35,9 @@
   },
   "HomePage": {
     "Hero": {
-      "titleStart": "Erstellen Sie erstaunliche",
+      "titleStart": "Erschaffen Sie",
       "titleEnd": "Intelligente digitale Erlebnisse",
-      "subtitle": "Digitale Erlebnisse, die als Apps, Agenten und Automatisierungen bereitgestellt werden, erfordern eine leistungsstarke Cloud-native Infrastruktur. Wir übernehmen die Komplexität, damit Sie sich auf Innovation konzentrieren können.",
+      "subtitle": "Digitale Erlebnisse, die als Apps, Agenten und Automatisierungen bereitgestellt werden, erfordern eine leistungsstarke Cloud-native Infrastruktur. Wir kümmern uns um die Komplexität, damit Sie sich auf Innovation konzentrieren können.",
       "ctaStart": "Loslegen",
       "ctaExplore": "Technologien erkunden"
     },
@@ -46,49 +47,52 @@
       "identities": "Verwaltete Identitäten",
       "countries": "Bediente Länder"
     },
+    "Partners": {
+      "trustedBy": "Das Vertrauen von Branchenführern"
+    },
     "Tech": {
-      "title": "Fundamentale Technologie für Ihre digitale Plattform",
-      "subtitle": "Erstellen, integrieren, sichern und stellen Sie digitale Dienste mit unserer marktführenden Suite von Lösungen bereit.",
+      "title": "Grundlegende Technologie für Ihre digitale Plattform",
+      "subtitle": "Erstellen, integrieren, sichern und stellen Sie digitale Dienste mit unserer marktführenden Lösungssuite bereit.",
       "cards": {
         "apiTitle": "API-Management",
-        "apiDesc": "Eine vollständige Lifecycle-Plattform zum Erstellen, Integrieren und Bereitstellen digitaler Dienste als verwaltete APIs.",
+        "apiDesc": "Eine Plattform für den gesamten Lebenszyklus zum Erstellen, Integrieren und Bereitstellen digitaler Dienste als verwaltete APIs.",
         "intTitle": "Integration",
-        "intDesc": "Unternehmensklasse-Technologie zum Verbinden von KI-Modellen, Datenquellen und Legacy-Systemen.",
-        "iamTitle": "Identity & Access (IAM)",
-        "iamDesc": "Sicherer und komfortabler Zugang für Verbraucher, Geschäftskunden und KI-Agenten.",
-        "devTitle": "Developer-Plattform",
-        "devDesc": "Befreien Sie Ihre Entwickler, um kreativ zu sein und Anwendungen schneller mit Self-Service-Fähigkeiten bereitzustellen."
+        "intDesc": "Technologie auf Unternehmensniveau zur Verbindung von KI-Modellen, Datenquellen und Legacy-Systemen.",
+        "iamTitle": "Identität & Zugriff (IAM)",
+        "iamDesc": "Sicherer und bequemer Zugriff für Verbraucher, Geschäftskunden und KI-Agenten.",
+        "devTitle": "Entwicklerplattform",
+        "devDesc": "Geben Sie Ihren Entwicklern die Freiheit, kreativ zu sein und Anwendungen schneller mit Self-Service-Funktionen bereitzustellen."
       },
       "learnMore": "Mehr erfahren"
     },
     "AI": {
       "badge": "Neue Intelligenz",
-      "title": "KI im Herzen Ihres Unternehmens",
-      "subtitle": "Integrieren Sie KI nahtlos in Ihr Unternehmen mit unseren offenen, skalierbaren und verwalteten Lösungen. Erstellen Sie KI-native Anwendungen und befähigen Sie Ihre Teams.",
+      "title": "KI im Herzen <br/> Ihres Unternehmens",
+      "subtitle": "Integrieren Sie KI nahtlos in Ihr Unternehmen mit unseren offenen, skalierbaren und verwalteten Lösungen.",
       "list": {
         "connect": "Verbinden Sie GenAI-Modelle mit Legacy-Daten",
-        "govern": "Verwalten Sie KI-Agenten mit IAM-Richtlinien",
+        "govern": "Steuern Sie KI-Agenten mit IAM-Richtlinien",
         "automate": "Automatisieren Sie Workflows mit intelligenter Innovation"
       },
       "cta": "KI-Lösungen erkunden",
       "stat": "Schnellere Bereitstellung"
     },
     "Recognition": {
-      "title": "Analystenanerkennung",
+      "title": "Analysten-Anerkennung",
       "cards": {
         "forresterOrg": "Forrester Wave™",
-        "forresterDesc": "Benannt als Leader in API-Management-Software, Q3 2024",
+        "forresterDesc": "Genannt als Leader für API-Management-Software, Q3 2024",
         "kuppingerOrg": "KuppingerCole",
-        "kuppingerDesc": "Gesamtprodukt- und Innovationsführer in CIAM, 2024",
+        "kuppingerDesc": "Gesamtprodukt- & Innovationsführer im Bereich CIAM, 2024",
         "gartnerOrg": "Gartner®",
-        "gartnerDesc": "Kundenwahl für Full Life Cycle API Management"
+        "gartnerDesc": "Customers' Choice für Full Life Cycle API Management"
       },
       "readReport": "Bericht lesen"
     },
     "CTA": {
       "title": "Bereit, Ihre Plattform zu bauen?",
-      "subtitle": "Schließen Sie sich den weltweit besten Unternehmen an, um sichere, intelligente digitale Erlebnisse zu liefern.",
-      "contact": "Verkauf kontaktieren",
+      "subtitle": "Schließen Sie sich den weltweit besten Unternehmen an, die sichere, intelligente digitale Erlebnisse bieten.",
+      "contact": "Vertrieb kontaktieren",
       "try": "Kostenlos testen"
     }
   }

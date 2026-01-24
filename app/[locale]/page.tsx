@@ -86,7 +86,7 @@ export default function Home() {
               // UPDATED STATS VALUES
               { value: 2500, suffix: "+", label: t("Stats.customers") },
               { value: 450, suffix: "M", label: t("Stats.transactions") },
-              { value: 99, suffix: ".8%", label: "Uptime" },
+              { value: 99, suffix: ".9%", label: "Uptime" },
               { value: 150, suffix: "+", label: t("Stats.countries") },
             ].map((stat, i) => (
               <div
