@@ -1,0 +1,96 @@
+{
+  "Navbar": {
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "company": "Company",
+    "bookDemo": "Book a Demo",
+    "appearance": "Appearance",
+    "language": "Language",
+    "governance": "Automated Governance",
+    "governanceDesc": "Fast-track compliance with AI.",
+    "dataNetwork": "Data Network",
+    "dataNetworkDesc": "Connect data across your value chain.",
+    "risk": "Risk Intelligence",
+    "riskDesc": "Identify multi-vector risks.",
+    "reporting": "Reporting Engine",
+    "reportingDesc": "Generate audit-ready reports.",
+    "enterprises": "For Enterprises",
+    "enterprisesDesc": "Streamlined compliance at scale.",
+    "fintech": "For FinTech",
+    "fintechDesc": "End-to-end regulatory coverage.",
+    "logistics": "For Logistics",
+    "logisticsDesc": "Supply chain visibility.",
+    "blog": "Insights Blog",
+    "blogDesc": "Trends in digital reporting.",
+    "events": "Events & Webinars",
+    "eventsDesc": "Upcoming summits.",
+    "about": "About Us",
+    "aboutDesc": "Our mission and history.",
+    "careers": "Careers",
+    "careersDesc": "Join the team.",
+    "contact": "Contact Support",
+    "contactDesc": "Get technical help.",
+    "hiring": "WE'RE HIRING"
+  },
+  "HomePage": {
+    "Hero": {
+      "titleStart": "Create Awesome",
+      "titleEnd": "Intelligent Digital Experiences",
+      "subtitle": "Digital experiences delivered as apps, agents, and automations require powerful cloud-native infrastructure. We handle the complexity so you can focus on innovation.",
+      "ctaStart": "Get Started",
+      "ctaExplore": "Explore Technologies"
+    },
+    "Stats": {
+      "customers": "Direct Enterprise Customers",
+      "transactions": "Transactions Processed",
+      "identities": "Identities Managed",
+      "countries": "Countries Served"
+    },
+    "Tech": {
+      "title": "Foundational Technology for Your Digital Platform",
+      "subtitle": "Build, integrate, secure, and deploy digital services with our market-leading suite of solutions.",
+      "cards": {
+        "apiTitle": "API Management",
+        "apiDesc": "A full lifecycle platform for building, integrating, and exposing digital services as managed APIs.",
+        "intTitle": "Integration",
+        "intDesc": "Enterprise-grade technology to connect AI models, data sources, and legacy systems.",
+        "iamTitle": "Identity & Access (IAM)",
+        "iamDesc": "Secure and convenient access for consumers, business customers, and AI agents.",
+        "devTitle": "Developer Platform",
+        "devDesc": "Free your developers to be creative and deliver applications faster with self-service capabilities."
+      },
+      "learnMore": "Learn more"
+    },
+    "AI": {
+      "badge": "New Intelligence",
+      "title": "AI at the Heart of Your Enterprise",
+      "subtitle": "Seamlessly integrate AI into your enterprise with our open, scalable, and governed solutions. Build AI-native applications and empower your teams.",
+      "list": {
+        "connect": "Connect GenAI models to legacy data",
+        "govern": "Govern AI agents with IAM policies",
+        "automate": "Automate workflows with intelligent innovation"
+      },
+      "cta": "Explore AI Solutions",
+      "stat": "Faster Deployment"
+    },
+    "Recognition": {
+      "title": "Analyst Recognition",
+      "cards": {
+        "forresterOrg": "Forrester Wave™",
+        "forresterDesc": "Named a Leader in API Management Software, Q3 2024",
+        "kuppingerOrg": "KuppingerCole",
+        "kuppingerDesc": "Overall Product & Innovation Leader in CIAM, 2024",
+        "gartnerOrg": "Gartner®",
+        "gartnerDesc": "Customers' Choice for Full Life Cycle API Management"
+      },
+      "readReport": "Read Report"
+    },
+    "CTA": {
+      "title": "Ready to Build Your Platform?",
+      "subtitle": "Join the world's best enterprises in delivering secure, intelligent digital experiences.",
+      "contact": "Contact Sales",
+      "try": "Try it Free"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Menu,
   X,
@@ -19,15 +19,40 @@ import {
   Truck,
   Building2,
   ArrowRight,
+  Check,
 } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
+import { useTranslations, useLocale } from "next-intl";
+
+// Define supported languages
+const languages = [
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+];
 
 export default function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   const { theme, toggleTheme } = useTheme();
+
+  // 1. Get current locale and translation hook
+  const t = useTranslations("Navbar");
+  const currentLocale = useLocale();
+  const router = useRouter();
   const pathname = usePathname();
+
+  // 2. Function to switch language via URL
+  const switchLanguage = (newLang: string) => {
+    // Replace the locale segment in the URL (e.g., /en/about -> /de/about)
+    const newPath = pathname.replace(`/${currentLocale}`, `/${newLang}`);
+    router.push(newPath);
+    setIsLangMenuOpen(false);
+    setIsMobileOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -35,7 +60,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isMobileOpen) {
       document.body.style.overflow = "hidden";
@@ -44,84 +68,85 @@ export default function Navbar() {
     }
   }, [isMobileOpen]);
 
+  // 3. Dynamic Navigation Structure using Translations
   const navStructure = {
-    Platform: [
+    [t("platform")]: [
       {
-        name: "Automated Governance",
-        desc: "Fast-track compliance with AI.",
+        name: t("governance"),
+        desc: t("governanceDesc"),
         icon: ShieldCheck,
         href: "/platform#governance",
       },
       {
-        name: "Data Network",
-        desc: "Connect data across your value chain.",
+        name: t("dataNetwork"),
+        desc: t("dataNetworkDesc"),
         icon: Globe,
         href: "/platform#network",
       },
       {
-        name: "Risk Intelligence",
-        desc: "Identify multi-vector risks.",
+        name: t("risk"),
+        desc: t("riskDesc"),
         icon: Zap,
         href: "/platform#risk",
       },
       {
-        name: "Reporting Engine",
-        desc: "Generate audit-ready reports.",
+        name: t("reporting"),
+        desc: t("reportingDesc"),
         icon: FileText,
         href: "/platform#reporting",
       },
     ],
-    Solutions: [
+    [t("solutions")]: [
       {
-        name: "For Enterprises",
-        desc: "Streamlined compliance at scale.",
+        name: t("enterprises"),
+        desc: t("enterprisesDesc"),
         icon: Building2,
         href: "/solutions#enterprise",
       },
       {
-        name: "For FinTech",
-        desc: "End-to-end regulatory coverage.",
+        name: t("fintech"),
+        desc: t("fintechDesc"),
         icon: BarChart3,
         href: "/solutions#fintech",
       },
       {
-        name: "For Logistics",
-        desc: "Supply chain visibility.",
+        name: t("logistics"),
+        desc: t("logisticsDesc"),
         icon: Truck,
         href: "/solutions#logistics",
       },
     ],
-    Resources: [
+    [t("resources")]: [
       {
-        name: "Insights Blog",
-        desc: "Trends in digital reporting.",
+        name: t("blog"),
+        desc: t("blogDesc"),
         icon: Layers,
         href: "/insights",
       },
       {
-        name: "Events & Webinars",
-        desc: "Upcoming summits.",
+        name: t("events"),
+        desc: t("eventsDesc"),
         icon: Users,
         href: "/events",
       },
     ],
-    Company: [
+    [t("company")]: [
       {
-        name: "About Us",
-        desc: "Our mission and history.",
+        name: t("about"),
+        desc: t("aboutDesc"),
         icon: Users,
         href: "/about",
       },
       {
-        name: "Careers",
-        desc: "Join the team.",
+        name: t("careers"),
+        desc: t("careersDesc"),
         icon: Zap,
         href: "/careers",
-        badge: "WE'RE HIRING",
+        badge: t("hiring"),
       },
       {
-        name: "Contact Support",
-        desc: "Get technical help.",
+        name: t("contact"),
+        desc: t("contactDesc"),
         icon: Users,
         href: "/contact",
       },
@@ -136,7 +161,10 @@ export default function Navbar() {
             ? "bg-white/90 dark:bg-[#050a14]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm"
             : "bg-transparent py-4"
         }`}
-        onMouseLeave={() => setActiveDropdown(null)}
+        onMouseLeave={() => {
+          setActiveDropdown(null);
+          setIsLangMenuOpen(false);
+        }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -160,7 +188,10 @@ export default function Navbar() {
                 <div
                   key={key}
                   className="relative h-full flex items-center py-4"
-                  onMouseEnter={() => setActiveDropdown(key)}
+                  onMouseEnter={() => {
+                    setActiveDropdown(key);
+                    setIsLangMenuOpen(false);
+                  }}
                 >
                   <button
                     className={`flex items-center gap-1 text-sm font-bold transition-colors ${
@@ -169,7 +200,7 @@ export default function Navbar() {
                         : "text-slate-600 dark:text-slate-300 hover:text-orange-600"
                     }`}
                   >
-                    {key}{" "}
+                    {key}
                     <ChevronDown
                       className={`h-4 w-4 transition-transform ${
                         activeDropdown === key ? "rotate-180" : ""
@@ -177,7 +208,7 @@ export default function Navbar() {
                     />
                   </button>
 
-                  {/* Dropdown Panel */}
+                  {/* Desktop Dropdown Panel */}
                   {activeDropdown === key && (
                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[380px]">
                       <div className="bg-white dark:bg-[#0b1221] rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-3 grid gap-1">
@@ -216,8 +247,53 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Desktop Actions */}
-            <div className="hidden md:flex items-center gap-4">
+            {/* Desktop Actions (Language + Theme + CTA) */}
+            <div className="hidden md:flex items-center gap-3">
+              {/* LANGUAGE SWITCHER */}
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  setIsLangMenuOpen(true);
+                  setActiveDropdown(null);
+                }}
+              >
+                <button className="flex items-center gap-1.5 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold text-sm transition-colors">
+                  <Globe className="h-4 w-4" />
+                  <span className="uppercase">{currentLocale}</span>
+                  <ChevronDown
+                    className={`h-3 w-3 transition-transform ${
+                      isLangMenuOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {isLangMenuOpen && (
+                  <div className="absolute top-full right-0 pt-2 w-40">
+                    <div className="bg-white dark:bg-[#0b1221] rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-1 overflow-hidden">
+                      {languages.map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => switchLanguage(lang.code)}
+                          className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${
+                            currentLocale === lang.code
+                              ? "bg-orange-50 dark:bg-orange-900/20 text-orange-600"
+                              : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
+                          }`}
+                        >
+                          <span className="flex items-center gap-2">
+                            <span>{lang.flag}</span> {lang.name}
+                          </span>
+                          {currentLocale === lang.code && (
+                            <Check className="h-3 w-3" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors"
@@ -228,26 +304,17 @@ export default function Navbar() {
                   <Sun className="h-5 w-5" />
                 )}
               </button>
+
               <Link
                 href="/book-demo"
-                className="px-6 py-2.5 rounded-full bg-orange-600 hover:bg-orange-700 text-white text-sm font-bold transition-all shadow-md hover:-translate-y-0.5"
+                className="ml-2 px-5 py-2.5 rounded-full bg-orange-600 hover:bg-orange-700 text-white text-sm font-bold transition-all shadow-md hover:-translate-y-0.5"
               >
-                Book a Demo
+                {t("bookDemo")}
               </Link>
             </div>
 
             {/* Mobile Actions & Toggle */}
             <div className="flex items-center gap-4 md:hidden z-50">
-              <button
-                onClick={toggleTheme}
-                className="p-2 text-slate-600 dark:text-slate-400"
-              >
-                {theme === "light" ? (
-                  <Moon className="h-5 w-5" />
-                ) : (
-                  <Sun className="h-5 w-5" />
-                )}
-              </button>
               <button
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
                 className="p-2 text-slate-900 dark:text-white"
@@ -272,6 +339,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col gap-8 pb-10">
+          {/* Mobile Links */}
           {Object.keys(navStructure).map((category) => (
             <div key={category}>
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
@@ -311,13 +379,60 @@ export default function Navbar() {
             </div>
           ))}
 
-          <div className="mt-4 pt-6 border-t border-slate-100 dark:border-slate-800">
+          {/* Mobile Utility Section (Theme + Language) */}
+          <div className="border-t border-slate-100 dark:border-slate-800 pt-6">
+            <div className="flex items-center justify-between mb-6">
+              <span className="text-sm font-bold text-slate-900 dark:text-white">
+                {t("appearance")}
+              </span>
+              <button
+                onClick={toggleTheme}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-medium text-sm"
+              >
+                {theme === "light" ? (
+                  <>
+                    <Moon className="h-4 w-4" /> Dark Mode
+                  </>
+                ) : (
+                  <>
+                    <Sun className="h-4 w-4" /> Light Mode
+                  </>
+                )}
+              </button>
+            </div>
+
+            <div className="space-y-3">
+              <span className="text-sm font-bold text-slate-900 dark:text-white">
+                {t("language")}
+              </span>
+              <div className="grid grid-cols-3 gap-2">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => switchLanguage(lang.code)}
+                    className={`flex flex-col items-center justify-center p-3 rounded-xl border transition-all ${
+                      currentLocale === lang.code
+                        ? "bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800 text-orange-700 dark:text-orange-400"
+                        : "bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400"
+                    }`}
+                  >
+                    <span className="text-xl mb-1">{lang.flag}</span>
+                    <span className="text-xs font-bold">
+                      {lang.code.toUpperCase()}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-2">
             <Link
               href="/book-demo"
               onClick={() => setIsMobileOpen(false)}
               className="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-orange-600 text-white font-bold text-lg shadow-lg active:scale-95 transition-transform"
             >
-              Book a Demo <ArrowRight className="h-5 w-5" />
+              {t("bookDemo")} <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
         </div>

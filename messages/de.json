@@ -1,0 +1,95 @@
+{
+  "Navbar": {
+    "platform": "Plattform",
+    "solutions": "Lösungen",
+    "company": "Unternehmen",
+    "bookDemo": "Demo buchen",
+    "appearance": "Erscheinungsbild",
+    "language": "Sprache",
+    "governance": "Automatisierte Governance",
+    "governanceDesc": "Beschleunigen Sie Compliance mit KI.",
+    "dataNetwork": "Datennetzwerk",
+    "dataNetworkDesc": "Verbinden Sie Daten in Ihrer Wertschöpfungskette.",
+    "risk": "Risikointelligenz",
+    "riskDesc": "Identifizieren Sie Multi-Vektor-Risiken.",
+    "reporting": "Berichts-Engine",
+    "reportingDesc": "Erstellen Sie prüfungsfähige Berichte.",
+    "enterprises": "Für Unternehmen",
+    "enterprisesDesc": "Optimierte Compliance im großen Maßstab.",
+    "fintech": "Für FinTech",
+    "fintechDesc": "End-to-End regulatorische Abdeckung.",
+    "logistics": "Für Logistik",
+    "logisticsDesc": "Transparenz in der Lieferkette.",
+    "blog": "Insights Blog",
+    "blogDesc": "Trends in der digitalen Berichterstattung.",
+    "events": "Veranstaltungen & Webinare",
+    "eventsDesc": "Kommende Gipfeltreffen.",
+    "about": "Über uns",
+    "aboutDesc": "Unsere Mission und Geschichte.",
+    "careers": "Karriere",
+    "careersDesc": "Werden Sie Teil des Teams.",
+    "contact": "Support kontaktieren",
+    "contactDesc": "Technische Hilfe erhalten.",
+    "hiring": "WIR STELLEN EIN"
+  },
+  "HomePage": {
+    "Hero": {
+      "titleStart": "Erstellen Sie erstaunliche",
+      "titleEnd": "Intelligente digitale Erlebnisse",
+      "subtitle": "Digitale Erlebnisse, die als Apps, Agenten und Automatisierungen bereitgestellt werden, erfordern eine leistungsstarke Cloud-native Infrastruktur. Wir übernehmen die Komplexität, damit Sie sich auf Innovation konzentrieren können.",
+      "ctaStart": "Loslegen",
+      "ctaExplore": "Technologien erkunden"
+    },
+    "Stats": {
+      "customers": "Direkte Unternehmenskunden",
+      "transactions": "Verarbeitete Transaktionen",
+      "identities": "Verwaltete Identitäten",
+      "countries": "Bediente Länder"
+    },
+    "Tech": {
+      "title": "Fundamentale Technologie für Ihre digitale Plattform",
+      "subtitle": "Erstellen, integrieren, sichern und stellen Sie digitale Dienste mit unserer marktführenden Suite von Lösungen bereit.",
+      "cards": {
+        "apiTitle": "API-Management",
+        "apiDesc": "Eine vollständige Lifecycle-Plattform zum Erstellen, Integrieren und Bereitstellen digitaler Dienste als verwaltete APIs.",
+        "intTitle": "Integration",
+        "intDesc": "Unternehmensklasse-Technologie zum Verbinden von KI-Modellen, Datenquellen und Legacy-Systemen.",
+        "iamTitle": "Identity & Access (IAM)",
+        "iamDesc": "Sicherer und komfortabler Zugang für Verbraucher, Geschäftskunden und KI-Agenten.",
+        "devTitle": "Developer-Plattform",
+        "devDesc": "Befreien Sie Ihre Entwickler, um kreativ zu sein und Anwendungen schneller mit Self-Service-Fähigkeiten bereitzustellen."
+      },
+      "learnMore": "Mehr erfahren"
+    },
+    "AI": {
+      "badge": "Neue Intelligenz",
+      "title": "KI im Herzen Ihres Unternehmens",
+      "subtitle": "Integrieren Sie KI nahtlos in Ihr Unternehmen mit unseren offenen, skalierbaren und verwalteten Lösungen. Erstellen Sie KI-native Anwendungen und befähigen Sie Ihre Teams.",
+      "list": {
+        "connect": "Verbinden Sie GenAI-Modelle mit Legacy-Daten",
+        "govern": "Verwalten Sie KI-Agenten mit IAM-Richtlinien",
+        "automate": "Automatisieren Sie Workflows mit intelligenter Innovation"
+      },
+      "cta": "KI-Lösungen erkunden",
+      "stat": "Schnellere Bereitstellung"
+    },
+    "Recognition": {
+      "title": "Analystenanerkennung",
+      "cards": {
+        "forresterOrg": "Forrester Wave™",
+        "forresterDesc": "Benannt als Leader in API-Management-Software, Q3 2024",
+        "kuppingerOrg": "KuppingerCole",
+        "kuppingerDesc": "Gesamtprodukt- und Innovationsführer in CIAM, 2024",
+        "gartnerOrg": "Gartner®",
+        "gartnerDesc": "Kundenwahl für Full Life Cycle API Management"
+      },
+      "readReport": "Bericht lesen"
+    },
+    "CTA": {
+      "title": "Bereit, Ihre Plattform zu bauen?",
+      "subtitle": "Schließen Sie sich den weltweit besten Unternehmen an, um sichere, intelligente digitale Erlebnisse zu liefern.",
+      "contact": "Verkauf kontaktieren",
+      "try": "Kostenlos testen"
+    }
+  }
+}
