@@ -47,6 +47,17 @@
       "identities": "Identities Managed",
       "countries": "Countries Served"
     },
+    "Certifications": {
+      "title": "Enterprise-Grade Security & Compliance",
+      "subtitle": "We adhere to the strictest global standards to keep your data safe.",
+      "verified": "Verified",
+      "items": {
+        "iso": { "name": "ISO 27001" },
+        "soc": { "name": "SOC 2 Type II" },
+        "gdpr": { "name": "GDPR Compliant" },
+        "hipaa": { "name": "HIPAA Ready" }
+      }
+    },
     "Partners": {
       "trustedBy": "Trusted by industry leaders"
     },

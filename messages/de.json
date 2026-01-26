@@ -47,6 +47,17 @@
       "identities": "Verwaltete Identitäten",
       "countries": "Bediente Länder"
     },
+    "Certifications": {
+      "title": "Sicherheit & Compliance auf Unternehmensniveau",
+      "subtitle": "Wir halten uns an die strengsten globalen Standards, um Ihre Daten zu schützen.",
+      "verified": "Verifiziert",
+      "items": {
+        "iso": { "name": "ISO 27001" },
+        "soc": { "name": "SOC 2 Typ II" },
+        "gdpr": { "name": "DSGVO Konform" },
+        "hipaa": { "name": "HIPAA Bereit" }
+      }
+    },
     "Partners": {
       "trustedBy": "Das Vertrauen von Branchenführern"
     },

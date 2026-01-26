@@ -9,22 +9,24 @@ import {
   BarChart3,
   Globe,
   Frame,
+  Lock,
+  FileText,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import CountUp from "react-countup";
 import Marquee from "react-fast-marquee";
 
-const partners = [
-  { name: "Acme Corp", icon: Layers },
-  { name: "Quantum", icon: Cpu },
-  { name: "Echo", icon: Shield },
-  { name: "Nebula", icon: Globe },
-  { name: "Vertex", icon: BarChart3 },
-  { name: "Horizon", icon: Frame },
-];
-
 export default function Home() {
   const t = useTranslations("HomePage");
+
+  const partners = [
+    { name: "Acme Corp", icon: Layers },
+    { name: "Quantum", icon: Cpu },
+    { name: "Echo", icon: Shield },
+    { name: "Nebula", icon: Globe },
+    { name: "Vertex", icon: BarChart3 },
+    { name: "Horizon", icon: Frame },
+  ];
 
   return (
     <div className="flex flex-col w-full overflow-hidden">
@@ -111,6 +113,58 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CERTIFICATIONS SECTION */}
+      <section className="py-20 bg-slate-50 dark:bg-[#0b1221] border-t border-slate-200 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          {/* Section Header */}
+          <div className="mb-12" data-aos="fade-up">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+              {/* Fix: Added Certifications. prefix */}
+              {t("Certifications.title")}
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+              {t("Certifications.subtitle")}
+            </p>
+          </div>
+
+          {/* Certification Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Note: Ensure 'certs' array is defined above in your component */}
+            {[
+              { id: "iso", icon: Shield, color: "text-blue-600" },
+              { id: "soc", icon: Lock, color: "text-green-600" },
+              { id: "gdpr", icon: Globe, color: "text-indigo-600" }, // Using Globe as placeholder for GlobeLock
+              { id: "hipaa", icon: FileText, color: "text-red-600" }, // Using FileText as placeholder for FileCheck
+            ].map((cert, i) => {
+              const Icon = cert.icon;
+              return (
+                <div
+                  key={i}
+                  className="group flex flex-col items-center p-6 bg-white dark:bg-[#151b2b] rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 100}
+                >
+                  <div
+                    className={`mb-4 p-4 rounded-full bg-slate-50 dark:bg-slate-900 ${cert.color}`}
+                  >
+                    <Icon className="h-10 w-10" />
+                  </div>
+
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                    {/* Fix: Added Certifications.items... prefix */}
+                    {t(`Certifications.items.${cert.id}.name`)}
+                  </h3>
+
+                  <span className="inline-flex items-center rounded-full bg-green-50 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:text-green-400">
+                    {t("Certifications.verified")}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

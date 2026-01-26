@@ -238,7 +238,7 @@ export default function Navbar() {
                                 </p>
                               </div>
                             </Link>
-                          )
+                          ),
                         )}
                       </div>
                     </div>
@@ -373,7 +373,7 @@ export default function Navbar() {
                         </p>
                       </div>
                     </Link>
-                  )
+                  ),
                 )}
               </div>
             </div>

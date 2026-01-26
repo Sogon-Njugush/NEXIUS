@@ -47,6 +47,17 @@
       "identities": "Identités Gérées",
       "countries": "Pays Desservis"
     },
+    "Certifications": {
+      "title": "Sécurité et conformité de niveau entreprise",
+      "subtitle": "Nous respectons les normes mondiales les plus strictes pour protéger vos données.",
+      "verified": "Vérifié",
+      "items": {
+        "iso": { "name": "ISO 27001" },
+        "soc": { "name": "SOC 2 Type II" },
+        "gdpr": { "name": "Conforme RGPD" },
+        "hipaa": { "name": "Compatible HIPAA" }
+      }
+    },
     "Partners": {
       "trustedBy": "La confiance des leaders de l'industrie"
     },
