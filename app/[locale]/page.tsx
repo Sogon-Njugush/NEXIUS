@@ -19,6 +19,12 @@ import Marquee from "react-fast-marquee";
 export default function Home() {
   const t = useTranslations("HomePage");
 
+  const shouldFail = true; // toggle this
+
+  if (shouldFail) {
+    throw new Error("Server connection error, please try again.");
+  }
+
   const partners = [
     { name: "Acme Corp", icon: Layers },
     { name: "Quantum", icon: Cpu },
@@ -27,6 +33,8 @@ export default function Home() {
     { name: "Vertex", icon: BarChart3 },
     { name: "Horizon", icon: Frame },
   ];
+
+  // throw new Error("Global error test");
 
   return (
     <div className="flex flex-col w-full overflow-hidden">
