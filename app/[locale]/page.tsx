@@ -19,12 +19,6 @@ import Marquee from "react-fast-marquee";
 export default function Home() {
   const t = useTranslations("HomePage");
 
-  const shouldFail = true; // toggle this
-
-  if (shouldFail) {
-    throw new Error("Server connection error, please try again.");
-  }
-
   const partners = [
     { name: "Acme Corp", icon: Layers },
     { name: "Quantum", icon: Cpu },
